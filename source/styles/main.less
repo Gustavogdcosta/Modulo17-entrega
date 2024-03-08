@@ -1,0 +1,103 @@
+@import "maps.less";
+@breakpointmobile: ~"(max-width: 767px)";
+@breakpointtablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto, sans-serif;
+}
+
+ul {
+    display: flex;
+
+    li{
+        list-style: none;
+
+
+        a {
+            text-decoration: none;
+            color: #cores[txtcolor];
+            font-weight: bolder;
+
+
+            button {
+                background-color: #cores[bgbutton];
+                color: #cores[txtcolor];
+                width: 90%;
+                margin: 0 auto;
+                padding: 3px;
+                font-size: 16px;
+                border-radius: 20px;
+                margin-left: 5%;
+
+                &:hover{
+                    transform: scale(1.1);
+                    background-color: #cores[bgbuttonhover];
+                }
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    @media @breakpointmobile {max-width: 767px;}
+}
+
+header, footer{
+    background-color: #cores[bgmenu];
+    padding: 12px;
+    p{color: #cores[txtcolor]; }
+    .container{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        li{
+            margin-left: 20px;
+            &:hover{transform: scale(1.2);}
+        }
+    }
+}
+
+section{
+    .container
+    h2 {margin: 20px 0;}
+    @media @breakpointtablet {margin:0 5%;}
+    @media @breakpointmobile{margin-left: 5%; } 
+    ul{
+        justify-content: space-between;
+        @media @breakpointmobile {display: block;}
+        @media @breakpointtablet {
+            display: grid;
+            grid-template-columns: 48% 48%;
+        }
+
+        li{
+            width: 20%;
+            @media @breakpointmobile{
+                width: 70%;
+                margin: 5% auto;
+            }
+            @media @breakpointtablet {
+                width: 100%;
+                margin: 5% auto;
+            }
+
+            p{margin: 5px 0;}
+            img{width: 100%;}
+        }
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @media @breakpointmobile {position: static;}
+    @media @breakpointtablet {position: static;}
+}   

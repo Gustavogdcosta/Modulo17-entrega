@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto, sans-serif;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+}
+ul li a button {
+  background-color: #2b9112;
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-left: 5%;
+}
+ul li a button:hover {
+  transform: scale(1.1);
+  background-color: #3fdf1793;
+}
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+}
+header,
+footer {
+  background-color: #388cec;
+  padding: 12px;
+}
+header p,
+footer p {
+  color: #fff;
+}
+header .container,
+footer .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+header .container li,
+footer .container li {
+  margin-left: 20px;
+}
+header .container li:hover,
+footer .container li:hover {
+  transform: scale(1.2);
+}
+section .container h2 {
+  margin: 20px 0;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section {
+    margin: 0 5%;
+  }
+}
+@media (max-width: 767px) {
+  section {
+    margin-left: 5%;
+  }
+}
+section ul {
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  section ul {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section ul {
+    display: grid;
+    grid-template-columns: 48% 48%;
+  }
+}
+section ul li {
+  width: 20%;
+}
+@media (max-width: 767px) {
+  section ul li {
+    width: 70%;
+    margin: 5% auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  section ul li {
+    width: 100%;
+    margin: 5% auto;
+  }
+}
+section ul li p {
+  margin: 5px 0;
+}
+section ul li img {
+  width: 100%;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  footer {
+    position: static;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    position: static;
+  }
+}
